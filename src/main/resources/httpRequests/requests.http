@@ -1,0 +1,130 @@
+POST http://localhost:9081/api/table/create-table
+Content-Type: application/json
+
+{
+  "tableName": "Customer",
+  "columnsAmount": 12,
+  "columnInfos": [
+    {
+      "title": "CustomerId",
+      "type": "int4"
+    },
+    {
+      "title": "FirstName",
+      "type": "VARCHAR(40)"
+    },
+    {
+      "title": "LastName",
+      "type": "VARCHAR(20)"
+    },
+    {
+      "title": "Company",
+      "type": "VARCHAR(80)"
+    },
+    {
+      "title": "Address",
+      "type": "VARCHAR(70)"
+    },
+    {
+      "title": "City",
+      "type": "VARCHAR(40)"
+    },
+    {
+      "title": "Country",
+      "type": "VARCHAR(40)"
+    },
+    {
+      "title": "PostalCode",
+      "type": "VARCHAR(10)"
+    },
+    {
+      "title": "Phone",
+      "type": "VARCHAR(24)"
+    },
+    {
+      "title": "Fax",
+      "type": "VARCHAR(24)"
+    },
+    {
+      "title": "Email",
+      "type": "VARCHAR(60)"
+    },
+    {
+      "title": "SupportRepId",
+      "type": "int4"
+    }
+  ],
+  "primaryKey": "CustomerId"
+}
+###
+POST http://localhost:9081/api/table/create-table
+Content-Type: application/json
+
+{
+"tableName": "Customer2",
+"columnsAmount": 2,
+"columnInfos": [
+{
+"title": "CustomerId",
+"type": "int4"
+},
+{
+"title": "FirstName",
+"type": "VARCHAR(40)"
+}
+],
+"primaryKey": "CustomerId"
+}
+
+###
+POST http://localhost:9081/api/table/create-table
+Content-Type: application/json
+
+{
+  "tableName": "Customer2",
+  "columnsAmount": 2,
+  "columnInfos": [
+    {
+      "title": "FirstName",
+      "type": "int4"
+    },
+    {
+      "title": "FirstName",
+      "type": "VARCHAR(40)"
+    }
+  ],
+  "primaryKey": "CustomerId"
+}
+
+###
+POST http://localhost:9081/api/table/create-table
+Content-Type: application/json
+
+{
+  "tableName": "Customer2",
+  "columnsAmount": 3,
+  "columnInfos": [
+    {
+      "title": "CustomerId",
+      "type": "int4"
+    },
+    {
+      "title": "FirstName",
+      "type": "VARCHAR(40)"
+    }
+  ],
+  "primaryKey": "CustomerId"
+}
+
+###
+GET http://localhost:9081/api/table/get-table-by-name/Customer2
+Content-Type: application/json
+
+###
+GET http://localhost:9081/api/table/get-table-by-name/Customer3
+Content-Type: application/json
+
+###
+DELETE http://localhost:9081/api/table/drop-table-by-name/Customer2
+Content-Type: application/json
+

@@ -1,0 +1,30 @@
+server:
+  port: 9081
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:mydb;DB_CLOSE_DELAY=-1
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      use-new-id-generator-mappings: false
+      schema_update:
+        unique_constraint_strategy: RECREATE_QUIETLY
+    generate-ddl: true
+    properties:
+      hibernate:
+        format_sql: true
+  h2:
+    spring.h2.console.settings.web-allow-others: false
+    console:
+      settings:
+        trace: false
+        web-admin-password: password
+      path: /h2
+      enabled: true
+
